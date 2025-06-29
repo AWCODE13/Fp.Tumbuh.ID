@@ -1,53 +1,46 @@
 <!DOCTYPE html>
 <html lang="id">
-<link rel="icon" href="ASSET/LogoAg.png">
 <head>
-    <meta charset="UTF-8">
-    <title>Tumbuh.ID-profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #184f23;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .section-card {
-            background-color: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
-
-        .judul {
-            font-size: 36px;
-            font-weight: 800;
-            color: #4e8258;
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: #a6f3b4 2px 2px 4px;
-        }
-
-        .isi-visi,
-        .isi-misi {
-            font-size: 18px;
-            color: #222;
-        }
-
-        body {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profil Tumbuh.ID - Platform edukasi digital agrobisnis dan pertanian modern.">
+  <title>Tumbuh.ID - Profile</title>
+  <link rel="icon" href="ASSET/LogoAg.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
       background-color: #f2f4f6;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Quicksand', 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+    .section-card {
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+    .judul {
+      font-size: 36px;
+      font-weight: 800;
+      color: #4e8258;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: #a6f3b4 2px 2px 4px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .isi-visi,
+    .isi-misi {
+      font-size: 18px;
+      color: #222;
     }
     h2 {
       color: #4e8258;
       font-weight: 700;
       margin-bottom: 40px;
-    }
-    .judul-bagan {
-      font-weight: 600;
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #4e8258;
+      font-family: 'Poppins', sans-serif;
     }
     .card-carousel {
       border-radius: 20px;
@@ -67,127 +60,140 @@
       padding: 10px 15px;
       color: #fff;
     }
-
     .section-bg {
       background-color: #f5fff7;
       padding: 40px 0;
       border-radius: 30px;
-    }
-    .judul {
-      font-weight: 700;
-      color: #4e8258;
+      margin-top: 40px;
     }
     .isi {
       font-size: 1.1rem;
       color: #000;
     }
-    
-    </style>
+    footer {
+      background-color: #4e8258;
+      border-radius: 20px 20px 0 0;
+      margin-top: 40px;
+    }
+    @media (max-width: 576px) {
+      .judul {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 28px !important;
+      }
+      .section-card {
+        padding: 18px;
+      }
+      .card-carousel img {
+        max-height: 180px;
+      }
+      .section-bg {
+        padding: 20px 0;
+        border-radius: 18px;
+      }
+      footer {
+        border-radius: 16px 16px 0 0;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
-        crossorigin="anonymous"></script>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4e8258;">
-  <div class="container">
-    <a class="navbar-brand" href="index.html" style="font-weight: bold;">Tumbuh.ID</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
-        <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
-        <li class="nav-item"><a class="nav-link" href="rekomendasi.html">Rekomendasi Produk</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <div class="container py-5">
-
-        <div class="section-card">
-            <div class="judul">Visi Tumbuh.ID</div>
-            <p class="text-center isi-visi">
-                Menjadi platform edukasi digital terdepan dalam menciptakan generasi muda yang inovatif, mandiri, dan berdaya saing
-                tinggi di bidang agrobisnis dan pertanian berkelanjutan. 
-            </p>
-        </div>
-
-        <div class="section-card">
-            <div class="judul">Misi Tumbuh.ID</div>
-            <ol class="isi-misi">
-                <li>Menyediakan materi pembelajaran agrobisnis yang berkualitas, mudah diakses, dan relevan dengan kebutuhan industri
-                </li>
-                <li>Mendorong keterlibatan generasi muda dalam dunia pertanian melalui pendekatan teknologi dan digitalisasi.
-                </li>
-                <li>Membangun kesadaran akan pentingnya pertanian berkelanjutan dan ramah lingkungan.</li>
-                <li>Menjalin kerja sama dengan institusi pendidikan, pelaku industri, dan komunitas petani untuk memperluas akses pembelajaran.</li>
-            </ol>
-        </div>
-
-    </div>
-    <div class="container py-5">
-    <h2 class="judul text-center" style="font-size: 50px;">Kegiatan Tumbuh.ID</h2>
-  <div class="row text-center">
-
-    <div class="col-md-6 mb-4">
-      <div id="carouselPemerintahan" class="carousel slide card-carousel" data-bs-ride="carousel" data-bs-interval="2000">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://cdn0-production-images-kly.akamaized.net/S1ikvfBHwh0EZsLL1Eo7e9Bm3pU=/1200x675/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3583404/original/057039600_1632620754-Pertanian.JPG" alt="Struktur Pemerintah 1">
-            <div class="carousel-caption">
-              <p>AgroEdu.id mendukung pertanian berkelanjutan melalui edukasi digital interaktif.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://imagedelivery.net/2MtOYVTKaiU0CCt-BLmtWw/161c5d98-76ec-4351-42d4-592cd279aa00/w=1920" alt="Struktur Pemerintah 2">
-            <div class="carousel-caption">
-              <p>Pembangun koneksi antara petani dan teknologi melalui platform edukatif.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 mb-4">
-      <div id="carouselBPD" class="carousel slide card-carousel" data-bs-ride="carousel" data-bs-interval="2000">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://smpit.almultazam.sch.id/wp-content/uploads/2024/03/fb6f7004-7081-4e0a-ba5c-c12a47ef389d.jpeg" alt="Struktur BPD 1">
-            <div class="carousel-caption">
-              <p>Komunitas pengguna AgroEdu.id yang terdiri dari petani muda, pelajar, dan pelaku usaha tani lokal..</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://potretjateng.com/wp-content/uploads/2024/12/1-2.jpeg" alt="Struktur BPD 2">
-            <div class="carousel-caption">
-              <p>Kolaborasi antar daerah dalam memperkuat edukasi pertanian berbasis teknologi dan keberlanjutan.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-     <section class="section-bg">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4e8258;">
     <div class="container">
-      <h2 class="judul">Pengertian Agrobisnis</h2>
-      <p class="isi mt-4">
-        Agrobisnis adalah seluruh kegiatan yang berkaitan dengan sektor pertanian dan usaha yang mendukungnya, mulai dari produksi, pengolahan, hingga pemasaran hasil pertanian. Agrobisnis mencakup kegiatan hulu seperti penyediaan benih dan pupuk, kegiatan budidaya, hingga kegiatan hilir seperti pengolahan hasil panen dan distribusinya ke pasar.
-      </p>
-      <p class="isi">
-        Agrobisnis berperan penting dalam meningkatkan kesejahteraan petani dan mendorong pertumbuhan ekonomi pedesaan. Dengan penerapan teknologi pertanian modern, efisiensi dan produktivitas sektor ini terus meningkat, memberikan dampak positif bagi pembangunan nasional.
-      </p>
-      <p class="isi">
-        Saat ini, agrobisnis menjadi salah satu fokus pembangunan berkelanjutan, mengintegrasikan aspek ekonomi, sosial, dan lingkungan untuk menciptakan sistem pertanian yang tangguh dan berdaya saing.
+      <a class="navbar-brand" href="index.html" style="font-weight: bold;">Tumbuh.ID</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+          <li class="nav-item"><a class="nav-link" href="rekomendasi.html">Rekomendasi Produk</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="section-card">
+      <div class="judul">Visi Tumbuh.ID</div>
+      <p class="text-center isi-visi">
+        Menjadi platform edukasi digital terdepan dalam menciptakan generasi muda yang inovatif, mandiri, dan berdaya saing tinggi di bidang agrobisnis dan pertanian berkelanjutan. 
       </p>
     </div>
-     </section>
-
+    <div class="section-card">
+      <div class="judul">Misi Tumbuh.ID</div>
+      <ol class="isi-misi">
+        <li>Menyediakan materi pembelajaran agrobisnis yang berkualitas, mudah diakses, dan relevan dengan kebutuhan industri</li>
+        <li>Mendorong keterlibatan generasi muda dalam dunia pertanian melalui pendekatan teknologi dan digitalisasi.</li>
+        <li>Membangun kesadaran akan pentingnya pertanian berkelanjutan dan ramah lingkungan.</li>
+        <li>Menjalin kerja sama dengan institusi pendidikan, pelaku industri, dan komunitas petani untuk memperluas akses pembelajaran.</li>
+      </ol>
+    </div>
   </div>
-</div>
-<footer class="text-white py-4" style="background-color: #4e8258; border-radius: 20px 20px 0 0;"> 
+
+  <div class="container py-5">
+    <h2 class="judul text-center" style="font-size: 50px;">Kegiatan Tumbuh.ID</h2>
+    <div class="row text-center">
+      <div class="col-md-6 mb-4">
+        <div id="carouselPemerintahan" class="carousel slide card-carousel" data-bs-ride="carousel" data-bs-interval="2000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://cdn0-production-images-kly.akamaized.net/S1ikvfBHwh0EZsLL1Eo7e9Bm3pU=/1200x675/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3583404/original/057039600_1632620754-Pertanian.JPG" alt="Struktur Pemerintah 1">
+              <div class="carousel-caption">
+                <p>AgroEdu.id mendukung pertanian berkelanjutan melalui edukasi digital interaktif.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://imagedelivery.net/2MtOYVTKaiU0CCt-BLmtWw/161c5d98-76ec-4351-42d4-592cd279aa00/w=1920" alt="Struktur Pemerintah 2">
+              <div class="carousel-caption">
+                <p>Pembangun koneksi antara petani dan teknologi melalui platform edukatif.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div id="carouselBPD" class="carousel slide card-carousel" data-bs-ride="carousel" data-bs-interval="2000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://smpit.almultazam.sch.id/wp-content/uploads/2024/03/fb6f7004-7081-4e0a-ba5c-c12a47ef389d.jpeg" alt="Struktur BPD 1">
+              <div class="carousel-caption">
+                <p>Komunitas pengguna AgroEdu.id yang terdiri dari petani muda, pelajar, dan pelaku usaha tani lokal.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://potretjateng.com/wp-content/uploads/2024/12/1-2.jpeg" alt="Struktur BPD 2">
+              <div class="carousel-caption">
+                <p>Kolaborasi antar daerah dalam memperkuat edukasi pertanian berbasis teknologi dan keberlanjutan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-bg">
+      <div class="container">
+        <h2 class="judul">Pengertian Agrobisnis</h2>
+        <p class="isi mt-4">
+          Agrobisnis adalah seluruh kegiatan yang berkaitan dengan sektor pertanian dan usaha yang mendukungnya, mulai dari produksi, pengolahan, hingga pemasaran hasil pertanian. Agrobisnis mencakup kegiatan hulu seperti penyediaan benih dan pupuk, kegiatan budidaya, hingga kegiatan hilir seperti pengolahan hasil panen dan distribusinya ke pasar.
+        </p>
+        <p class="isi">
+          Agrobisnis berperan penting dalam meningkatkan kesejahteraan petani dan mendorong pertumbuhan ekonomi pedesaan. Dengan penerapan teknologi pertanian modern, efisiensi dan produktivitas sektor ini terus meningkat, memberikan dampak positif bagi pembangunan nasional.
+        </p>
+        <p class="isi">
+          Saat ini, agrobisnis menjadi salah satu fokus pembangunan berkelanjutan, mengintegrasikan aspek ekonomi, sosial, dan lingkungan untuk menciptakan sistem pertanian yang tangguh dan berdaya saing.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="text-white py-4 mt-5" style="background-color: #4e8258; border-radius: 20px 20px 0 0;">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -210,7 +216,5 @@
       <p class="text-center mb-0">&copy; 2025 TumbuhID.Amikom | Powered by Tumbuh.ID</p>
     </div>
   </footer>
-</html>
 </body>
-
 </html>
