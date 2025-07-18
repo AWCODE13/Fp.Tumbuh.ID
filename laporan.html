@@ -177,7 +177,6 @@
             </tr>
           </thead>
           <tbody>
-            <!-- ...isi tabel universitas seperti sebelumnya... -->
             <tr>
               <td>1</td>
               <td><b>Institut Pertanian Bogor (IPB)</b></td>
@@ -289,7 +288,6 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Animasi table dan form saat scroll (optional, bisa dihapus jika tidak ingin)
     document.addEventListener('DOMContentLoaded', function() {
       var table = document.querySelector('.table-anim');
       var form = document.querySelector('.form-section');
@@ -297,7 +295,6 @@
       form.classList.add('slide-in');
     });
 
-    // Validasi form tanya jawab
     document.getElementById('tanyaForm').addEventListener('submit', function(e) {
       var nama = document.getElementById('inputNama');
       var email = document.getElementById('inputEmail');
@@ -329,12 +326,10 @@
       } else {
         e.preventDefault();
         notif.classList.remove('d-none');
-        // Di aplikasi nyata, di sini lakukan AJAX/kirim data ke server
         document.getElementById('tanyaForm').reset();
       }
     });
 
-    // Hilangkan error saat input
     ['inputNama','inputEmail','inputPesan'].forEach(function(id){
       document.getElementById(id).addEventListener('input', function(){
         this.classList.remove('is-invalid');
