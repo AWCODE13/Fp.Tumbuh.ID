@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Tumbuh.ID</title>
+  <link rel="icon" href="ASSET/LogoAg.png">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #d6e5c3;
+      font-family: 'Quicksand', 'Segoe UI', sans-serif;
+    }
+    .main-content {
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      max-width: 400px;
+      width: 100%;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(78,130,88,0.10);
+      padding: 32px 28px;
+      margin: 0 auto;
+    }
+    .login-logo {
+      width: 150px;
+    }
+    .login-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #4e8258;
+      margin-bottom: 10px;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .form-label {
+      font-weight: 600;
+      color: #4e8258;
+    }
+    .btn-success {
+      background-color: #4e8258;
+      border: none;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .btn-success:hover {
+      background-color: #3a6545;
+    }
+    .form-control:focus {
+      border-color: #4e8258;
+      box-shadow: 0 0 0 0.2rem rgba(78,130,88,.15);
+    }
+    @media (max-width: 576px) {
+      .login-container {
+        margin: 32px 8px;
+        padding: 20px 10px;
+      }
+      .login-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="login-container shadow-sm">
+      <div class="text-center">
+<a href="index.html">
+  <img src="ASSET/LogoAg.png" alt="Logo Tumbuh.ID" class="login-logo">
+</a>
+        <div class="login-title">Login Tumbuh.ID</div>
+        <p class="mb-4" style="color:#4e8258;">Masuk untuk mengakses fitur komunitas & edukasi agribisnis</p>
+      </div>
+      <form id="loginForm" autocomplete="off">
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">Email atau Username</label>
+          <input type="text" class="form-control" id="inputEmail" placeholder="Masukkan email atau username">
+          <div class="invalid-feedback">
+            Email atau Username wajib diisi.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Masukkan password">
+          <div class="invalid-feedback">
+            Password wajib diisi.
+          </div>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Ingat saya</label>
+        </div>
+        <button type="submit" class="btn btn-success w-100 mb-2">Login</button>
+        <div class="text-center">
+          <a href="lupapw.html" style="color:#4e8258; font-size:0.95rem;">Lupa password?</a>
+        </div>
+      </form>
+      <hr>
+      <div class="text-center" style="font-size:0.97rem;">
+        Belum punya akun? <a href="daftar.html" style="color:#4e8258; font-weight:600;">Daftar di sini</a>
+      </div>
+    </div>
+  </div>
+  <footer class="text-white py-3" style="background-color: #4e8258; border-radius: 20px 20px 0 0; text-align:center;">
+    <p class="mb-0">&copy; 2025 TumbuhID.Amikom | Powered by Tumbuh.ID</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      var emailInput = document.getElementById('inputEmail');
+      var passInput = document.getElementById('inputPassword');
+      var valid = true;
+
+      emailInput.classList.remove('is-invalid');
+      passInput.classList.remove('is-invalid');
+
+      if(emailInput.value.trim() === "") {
+        emailInput.classList.add('is-invalid');
+        valid = false;
+      }
+      if(passInput.value.trim() === "") {
+        passInput.classList.add('is-invalid');
+        valid = false;
+      }
+
+      if(!valid) {
+        e.preventDefault();
+        alert("Email/Username dan Password wajib diisi!");
+      } else {
+        e.preventDefault();
+        localStorage.setItem('isLoggedIn', 'true');
+        window.location.href = "index.html";
+      }
+    });
+
+    document.getElementById('inputEmail').addEventListener('input', function() {
+      this.classList.remove('is-invalid');
+    });
+    document.getElementById('inputPassword').addEventListener('input', function() {
+      this.classList.remove('is-invalid');
+    });
+  </script>
+</body>
+</html>
