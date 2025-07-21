@@ -2,9 +2,10 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laporan Pertanian - Tumbuh.ID</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Laporan Kampus</title>
   <link rel="icon" href="ASSET/LogoAg.png">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -17,38 +18,42 @@
     }
     .main-content {
       flex: 1 0 auto;
-      padding: 40px 0 20px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: fadeIn 1.2s;
+      padding: 24px 0 12px 0;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #4e8258;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+      text-align: center;
+      letter-spacing: 1px;
     }
     .table-anim {
-      animation: fadeInUp 1.2s;
       background: #fff;
-      border-radius: 18px;
+      border-radius: 14px;
       box-shadow: 0 4px 24px rgba(78,130,88,0.10);
-      overflow: hidden;
+      overflow-x: auto;
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 32px;
     }
     .table thead {
       background: linear-gradient(90deg, #4e8258 80%, #6fcf97 100%);
       color: #fff;
     }
-    .table tbody tr {
-      transition: background 0.2s;
-    }
-    .table tbody tr:hover {
-      background: #e0f2e9;
-    }
     .form-section {
-  max-width: 500px;
-  width: 100%;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(78,130,88,0.10);
-  padding: 28px 24px 18px 24px;
-  animation: fadeInUp 1.5s;
-}
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(78,130,88,0.10);
+      padding: 18px 14px 14px 14px;
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto 32px auto;
+    }
     .form-label {
       color: #4e8258;
       font-weight: 600;
@@ -59,35 +64,43 @@
       font-weight: 700;
       letter-spacing: 1px;
       transition: background 0.3s, transform 0.2s;
+      font-size: 1rem;
+      padding: 8px 0;
     }
     .btn-success:hover, .btn-success:focus {
       background: linear-gradient(90deg, #3a6545 70%, #4e8258 100%);
       transform: translateY(-2px) scale(1.03);
     }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(40px);}
-      100% { opacity: 1; transform: translateY(0);}
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0;}
-      100% { opacity: 1;}
-    }
     .alert-success {
       animation: fadeIn 0.7s;
     }
-    .section-title {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      color: #4e8258;
-      margin-bottom: 18px;
-      font-size: 2rem;
-      text-align: center;
-      letter-spacing: 1px;
-      animation: fadeIn 1.2s;
+    @media (max-width: 768px) {
+      .main-content { padding: 8px 0 6px 0; max-width: 100vw;}
+      .section-title { font-size: 1.1rem; }
+      .table-anim, .form-section { font-size: 0.93rem; }
+      .form-section { padding: 10px 4px 8px 4px; }
     }
-  
-
-.navbar-nav .nav-link.nav-minimal {
+    @media (max-width: 420px) {
+      .section-title { font-size: 0.98rem; }
+      .table-anim, .form-section { font-size: 0.89rem; }
+      .form-section { padding: 7px 2px 6px 2px; }
+    }
+@media (max-width: 768px) {
+  .main-content { padding: 6px 0 4px 0; max-width: 100vw;}
+  .section-title { font-size: 1rem; }
+  .table-anim, .form-section { font-size: 0.92rem; }
+  .form-section { padding: 8px 2px 6px 2px; }
+}
+@media (max-width: 480px) {
+  .main-content { padding: 2px 0 2px 0; }
+  .section-title { font-size: 0.93rem; }
+  .table-anim, .form-section { font-size: 0.87rem; }
+  .form-section { padding: 5px 1px 4px 1px; }
+  .btn-success { font-size: 0.9rem; padding: 6px 0; }
+  .table-responsive { font-size: 0.87rem; }
+  th, td { padding: 0.35rem 0.4rem !important; }
+}
+ .navbar-nav .nav-link.nav-minimal {
   font-weight: 500;
   font-size: 1.07rem;
   border-radius: 0;
@@ -117,24 +130,19 @@
   background: #fff;
 }
 .navbar-nav .nav-link.nav-minimal:focus {
-  color: #e0f2e9;
+  color: #e0f2e9 ;
 }
 .navbar-nav .nav-link.nav-minimal:hover {
-  color: #e0f2e9;
-  background: none;
+  color: #e0f2e9 ;
+  background: none ;
   text-decoration: none;
 }
-    @media (max-width: 576px) {
-      .main-content { padding: 20px 0 10px 0; }
-      .form-section { padding: 16px 6px 10px 6px;}
-      .section-title { font-size: 1.2rem;}
-    }
   </style>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark shadow-sm animated-navbar" style="background: linear-gradient(90deg, #4e8258 80%, #6fcf97 100%); border-radius: 0 0 18px 18px; margin-bottom: 24px;">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background: linear-gradient(90deg, #4e8258 80%, #6fcf97 100%); border-radius: 0 0 18px 18px; margin-bottom: 18px;">
   <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html" style="font-size:1.3rem; letter-spacing:1px; animation: fadeIn 1.2s;">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html" style="font-size:1.3rem; letter-spacing:1px;">
       <span style="color:#fff;">Tumbuh.ID</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -161,181 +169,185 @@
     </div>
   </div>
 </nav>
- <div class="main-content container">
-  <div class="row justify-content-center align-items-start g-4">
-    <div class="col-lg-7 mb-4">
-      <div class="section-title">5 Universitas Terbaik Bidang Pertanian di Indonesia</div>
-      <div class="table-responsive table-anim mb-0" style="max-width:100%;">
-        <table class="table align-middle mb-0">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Universitas</th>
-              <th>Kota</th>
-              <th>Fakultas/Program Unggulan</th>
-              <th>Prestasi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><b>Institut Pertanian Bogor (IPB)</b></td>
-              <td>Bogor</td>
-              <td>Agronomi, Ilmu Tanah, Agribisnis</td>
-              <td>
-                <span class="badge bg-success">QS World Rank #1 Indonesia</span><br>
-                Kampus inovasi pertanian
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><b>Universitas Gadjah Mada (UGM)</b></td>
-              <td>Yogyakarta</td>
-              <td>Pertanian, Teknologi Pangan, Peternakan</td>
-              <td>
-                <span class="badge bg-primary">Kampus Merdeka Award</span><br>
-                Banyak riset internasional
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><b>Universitas Brawijaya (UB)</b></td>
-              <td>Malang</td>
-              <td>Agroteknologi, Agribisnis, Ilmu Hama & Penyakit Tumbuhan</td>
-              <td>
-                <span class="badge bg-warning text-dark">Juara PKM Nasional</span><br>
-                Pusat inovasi pangan
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td><b>Universitas Padjadjaran (UNPAD)</b></td>
-              <td>Bandung</td>
-              <td>Agroteknologi, Ilmu Tanah, Agribisnis</td>
-              <td>
-                <span class="badge bg-info text-dark">Kampus Hijau</span><br>
-                Kerjasama internasional
-              </td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td><b>Universitas Andalas (UNAND)</b></td>
-              <td>Padang</td>
-              <td>Agronomi, Teknologi Hasil Pertanian</td>
-              <td>
-                <span class="badge bg-danger">Inovasi Pertanian Sumatera</span><br>
-                Banyak program pengabdian
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="col-lg-5 mb-4">
-              <div class="section-title">Form untuk bertanya seputar pertanian</div>
+<div class="main-content">
+  <div class="section-title">10 Kampus Pertanian Terbaik di Indonesia</div>
+  <div class="table-responsive table-anim">
+    <table class="table align-middle mb-0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Universitas</th>
+          <th>Kota</th>
+          <th>Fakultas/Program Unggulan</th>
+          <th>Prestasi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><b>Institut Pertanian Bogor (IPB)</b></td>
+          <td>Bogor</td>
+          <td>Agronomi, Ilmu Tanah, Agribisnis</td>
+          <td><span class="badge bg-success">QS World Rank #1 Indonesia</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><b>Universitas Gadjah Mada (UGM)</b></td>
+          <td>Yogyakarta</td>
+          <td>Pertanian, Teknologi Pangan, Peternakan</td>
+          <td><span class="badge bg-primary">Kampus Merdeka Award</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><b>Universitas Brawijaya (UB)</b></td>
+          <td>Malang</td>
+          <td>Agroteknologi, Agribisnis, Ilmu Hama & Penyakit Tumbuhan</td>
+          <td><span class="badge bg-warning text-dark">Juara PKM Nasional</span></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><b>Universitas Padjadjaran (UNPAD)</b></td>
+          <td>Bandung</td>
+          <td>Agroteknologi, Ilmu Tanah, Agribisnis</td>
+          <td><span class="badge bg-info text-dark">Kampus Hijau</span></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><b>Universitas Andalas (UNAND)</b></td>
+          <td>Padang</td>
+          <td>Agronomi, Teknologi Hasil Pertanian</td>
+          <td><span class="badge bg-danger">Inovasi Pertanian Sumatera</span></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><b>Universitas Jember (UNEJ)</b></td>
+          <td>Jember</td>
+          <td>Agroteknologi, Agribisnis, Proteksi Tanaman</td>
+          <td><span class="badge bg-success">Kampus Riset Tumbuhan</span></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><b>Universitas Lampung (UNILA)</b></td>
+          <td>Lampung</td>
+          <td>Agroteknologi, Agribisnis, Ilmu Tanah</td>
+          <td><span class="badge bg-primary">Pengabdian Masyarakat</span></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><b>Universitas Hasanuddin (UNHAS)</b></td>
+          <td>Makassar</td>
+          <td>Agribisnis, Ilmu Tanah, Peternakan</td>
+          <td><span class="badge bg-info text-dark">Kampus Hijau Timur</span></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><b>Universitas Sebelas Maret (UNS)</b></td>
+          <td>Surakarta</td>
+          <td>Agroteknologi, Agribisnis, Penyuluhan Pertanian</td>
+          <td><span class="badge bg-warning text-dark">Inovasi Penyuluhan</span></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><b>Universitas Syiah Kuala (USK)</b></td>
+          <td>Banda Aceh</td>
+          <td>Agroteknologi, Agribisnis, Ilmu Tanah</td>
+          <td><span class="badge bg-danger">Kampus Unggul Aceh</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-      <div class="form-section shadow-sm">
-        <div class="mb-3 text-center" style="font-size:1.2rem; color:#4e8258; font-weight:600;">
-          Form Tanya Jawab
-        </div>
-        <form id="tanyaForm" autocomplete="off">
-          <div class="mb-3">
-            <label for="inputNama" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="inputNama" placeholder="Nama Anda">
-            <div class="invalid-feedback">Nama wajib diisi.</div>
-          </div>
-          <div class="mb-3">
-            <label for="inputEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email aktif">
-            <div class="invalid-feedback">Email wajib diisi dan valid.</div>
-          </div>
-          <div class="mb-3">
-            <label for="inputPesan" class="form-label">Pertanyaan / Pesan</label>
-            <textarea class="form-control" id="inputPesan" rows="3" placeholder="Tulis pertanyaan atau pesan Anda"></textarea>
-            <div class="invalid-feedback">Pesan wajib diisi.</div>
-          </div>
-          <button type="submit" class="btn btn-success w-100">Kirim</button>
-        </form>
-        <div id="notifSuccess" class="alert alert-success mt-3 d-none text-center" role="alert">
-          Pesan Anda telah terkirim! Kami akan membalas melalui email.
-        </div>
+  <div class="section-title">Form Layanan Pertanyaan</div>
+  <div class="form-section shadow-sm">
+    <form id="tanyaForm" autocomplete="off">
+      <div class="mb-3">
+        <label for="inputNama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="inputNama" placeholder="Nama Anda">
+        <div class="invalid-feedback">Nama wajib diisi.</div>
       </div>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email aktif">
+        <div class="invalid-feedback">Email wajib diisi dan valid.</div>
+      </div>
+      <div class="mb-3">
+        <label for="inputPesan" class="form-label">Pertanyaan / Pesan</label>
+        <textarea class="form-control" id="inputPesan" rows="3" placeholder="Tulis pertanyaan atau pesan Anda"></textarea>
+        <div class="invalid-feedback">Pesan wajib diisi.</div>
+      </div>
+      <button type="submit" class="btn btn-success w-100">Kirim</button>
+    </form>
+    <div id="notifSuccess" class="alert alert-success mt-3 d-none text-center" role="alert">
+      Pesan Anda telah terkirim! Kami akan membalas melalui email.
     </div>
   </div>
 </div>
-    <footer class="text-white py-4" style="background-color: #4e8258; border-radius: 20px 20px 0 0;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h5>Kontak Kami</h5>
-          <p>
-            📞 0899-9999-9999<br>
-            ✉️ TumbuhID@gmail.com<br>
-            🕒 Jam Operasional: 08.00 - 17.00 WIB<br>
-            📍 Jl. Kenangan Cinta, Bagas Gisha, Sleman, Yogyakarta
-          </p>
-        </div>
-        <div class="col-md-6 text-md-end">
-         <h5 style="font-weight: bold;">Ikuti Kami</h5>
-  <a href="#" class="text-white me-3 fs-4" title="Facebook"><i class="bi bi-facebook"></i></a>
-  <a href="https://www.instagram.com/tumbuh.idn/" class="text-white me-3 fs-4" title="Instagram"><i class="bi bi-instagram"></i></a>
-  <a href="#" class="text-white fs-4" title="YouTube"><i class="bi bi-youtube"></i></a>
-</div>
+<footer class="text-white py-4" style="background-color: #4e8258; border-radius: 20px 20px 0 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Kontak Kami</h5>
+        <p>
+          📞 0899-9999-9999<br>
+          ✉️ TumbuhID@gmail.com<br>
+          🕒 Jam Operasional: 08.00 - 17.00 WIB<br>
+          📍 Jl. Kenangan Cinta, Bagas Gisha, Sleman, Yogyakarta
+        </p>
       </div>
-      <hr class="bg-light">
-      <p class="text-center mb-0">&copy; 2025 TumbuhID.Amikom | Powered by Tumbuh.ID</p>
+      <div class="col-md-6 text-md-end">
+        <h5 style="font-weight: bold;">Ikuti Kami</h5>
+        <a href="#" class="text-white me-3 fs-4" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/tumbuh.idn/" class="text-white me-3 fs-4" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white fs-4" title="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var table = document.querySelector('.table-anim');
-      var form = document.querySelector('.form-section');
-      table.classList.add('slide-in');
-      form.classList.add('slide-in');
+    <hr class="bg-light">
+    <p class="text-center mb-0">&copy; 2025 TumbuhID.Amikom | Powered by Tumbuh.ID</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('tanyaForm').addEventListener('submit', function(e) {
+    var nama = document.getElementById('inputNama');
+    var email = document.getElementById('inputEmail');
+    var pesan = document.getElementById('inputPesan');
+    var notif = document.getElementById('notifSuccess');
+    var valid = true;
+
+    [nama, email, pesan].forEach(function(input) {
+      input.classList.remove('is-invalid');
     });
+    notif.classList.add('d-none');
 
-    document.getElementById('tanyaForm').addEventListener('submit', function(e) {
-      var nama = document.getElementById('inputNama');
-      var email = document.getElementById('inputEmail');
-      var pesan = document.getElementById('inputPesan');
-      var notif = document.getElementById('notifSuccess');
-      var valid = true;
+    if(nama.value.trim() === "") {
+      nama.classList.add('is-invalid');
+      valid = false;
+    }
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(email.value.trim() === "" || !emailPattern.test(email.value.trim())) {
+      email.classList.add('is-invalid');
+      valid = false;
+    }
+    if(pesan.value.trim() === "") {
+      pesan.classList.add('is-invalid');
+      valid = false;
+    }
 
-      [nama, email, pesan].forEach(function(input) {
-        input.classList.remove('is-invalid');
-      });
-      notif.classList.add('d-none');
+    if(!valid) {
+      e.preventDefault();
+    } else {
+      e.preventDefault();
+      notif.classList.remove('d-none');
+      document.getElementById('tanyaForm').reset();
+    }
+  });
 
-      if(nama.value.trim() === "") {
-        nama.classList.add('is-invalid');
-        valid = false;
-      }
-      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if(email.value.trim() === "" || !emailPattern.test(email.value.trim())) {
-        email.classList.add('is-invalid');
-        valid = false;
-      }
-      if(pesan.value.trim() === "") {
-        pesan.classList.add('is-invalid');
-        valid = false;
-      }
-
-      if(!valid) {
-        e.preventDefault();
-      } else {
-        e.preventDefault();
-        notif.classList.remove('d-none');
-        document.getElementById('tanyaForm').reset();
-      }
-    });
-
-    ['inputNama','inputEmail','inputPesan'].forEach(function(id){
-      document.getElementById(id).addEventListener('input', function(){
-        this.classList.remove('is-invalid');
-        document.getElementById('notifSuccess').classList.add('d-none');
-      });
-    });
-  </script>
+  ['inputNama','inputEmail','inputPesan'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', function(){
+      this.classList.remove('is-invalid');
+      document.getElementById('notifSuccess').classList.add('d-none');
+        });
+  });
+</script>
 </body>
 </html>
